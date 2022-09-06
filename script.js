@@ -25,7 +25,7 @@ let score = 20;
 let highscore = 0;
 document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
-  if (!guess || (guess>20 && guess<0)) {
+  if (guess>20 || guess<=0) {
     displayMessage('Not a valid number ⛔');
   } else if (guess === secretNm) {
     displayMessage('🎉🔥 You Won!');
@@ -34,7 +34,7 @@ document.querySelector('.check').addEventListener('click', function () {
     highscoreFunc(highscore);
     bodyColor('#60b347');
     setWidth('30rem');
-  } else {
+  } else if (guess !== secretNm) {
     if (score > 1) {
       displayMessage(guess < secretNm ? 'Increase 📈 your guess..' : 'Lower 📉 your guess..');
       score--;
