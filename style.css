@@ -24,8 +24,8 @@ body {
 
 /* LAYOUT */
 header {
-  width: 100%;
   height: 35%;
+  width: auto;
   position: relative;
   border-bottom: 7px solid #eee;
 }
@@ -48,16 +48,16 @@ footer {
 }
 
 .left {
-  width: 50%;
+  width: 45%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 1.7rem;
+  font-size: 110%;
 }
 
 .right {
-  width: 50%;
-  font-size: 1.7rem;
+  width: 55%;
+  font-size: 150%;
 }
 
 /* ELEMENTS STYLE */
@@ -85,13 +85,14 @@ h1 {
 }
 
 .between {
-  font-size: 1.5rem;
+  font-size: 110%;
   position: absolute;
   top: 2rem;
   right: 2rem;
 }
 
 .again {
+  font-size: 150%;
   position: absolute;
   top: 2rem;
   left: 2rem;
@@ -104,13 +105,14 @@ h1 {
   color: inherit;
   font-size: 2rem;
   padding: 2rem;
-  width: 25rem;
+  width: 15rem;
+  height: 8rem;
   text-align: center;
   display: block;
   margin-bottom: 3rem;
 }
 
-.btn {
+.btn-btn {
   border: none;
   background-color: #eee;
   color: #222;
@@ -120,10 +122,24 @@ h1 {
   cursor: pointer;
 }
 
-.btn:hover {
+.btn {
+  border: none;
+  width: 13rem;
+  background-color: #eee;
+  color: #222;
+  font-size: 2rem;
+  font-family: inherit;
+  padding: 2rem 3rem;
+  cursor: pointer;
+}
+
+.btn:hover .btn-btn:hover {
   background-color: #ccc;
 }
 
+.btn:active .btn-btn:active {
+  background-color: #60b347;
+}
 .message {
   margin-bottom: 8rem;
   height: 3rem;
