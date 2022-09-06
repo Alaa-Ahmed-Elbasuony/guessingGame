@@ -34,9 +34,19 @@ document.querySelector('.check').addEventListener('click', function () {
     highscoreFunc(highscore);
     bodyColor('#60b347');
     setWidth('30rem');
-  } else if (guess !== secretNm) {
+  } else if (guess > secretNm) {
     if (score > 1) {
-      displayMessage(guess < secretNm ? 'Increase 📈 your guess..' : 'Lower 📉 your guess..');
+      displayMessage(guess - 5 > secretNm ? 'extremely high 📈' : 'high 📈');
+      score--;
+      scoreText(score);
+    }
+    else {
+      displayMessage('You lost 💔');
+      scoreText() = 0;
+    }
+  } else if (guess < secretNm) {
+    if (score > 1) {
+      displayMessage(guess + 5 < secretNm ? 'extremely low 📉' : 'low 📉');
       score--;
       scoreText(score);
     }
