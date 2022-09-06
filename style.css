@@ -120,6 +120,7 @@ h1 {
   font-family: inherit;
   padding: 2rem 3rem;
   cursor: pointer;
+  border-radius: 25% 25% 20% 20%;
 }
 
 .btn {
@@ -131,13 +132,16 @@ h1 {
   font-family: inherit;
   padding: 2rem 3rem;
   cursor: pointer;
+  border-radius: 15%;
 }
 
-.btn:hover .btn-btn:hover {
+.btn:hover,
+.btn-btn:hover {
   background-color: #ccc;
 }
 
-.btn:active .btn-btn:active {
+.btn:active,
+.btn-btn:active {
   background-color: #60b347;
 }
 .message {
@@ -153,9 +157,10 @@ h1 {
   justify-content: center;
 }
 .reset-highscore {
+  width: 40%;
   background: #eee;
   color: #333;
-  font-size: 2rem;
+  font-size: 1.7rem;
   text-align: center;
   position: absolute;
   bottom: 0;
